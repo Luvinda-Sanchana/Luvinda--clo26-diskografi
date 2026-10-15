@@ -13,19 +13,70 @@
 
 ## 1. Skapa databasen — CREATE TABLE
 
-```sql
---- skriv din SQL-kod här ---
+CREATE TABLE "Artist" (
+	"Name"	TEXT,
+	"Artist_ID"	TEXT,
+	"Birth_year"	TEXT,
+	"City"	TEXT,
+	"Genre"	TEXT,
+	"Number_of_Albums"	INTEGER,
+	PRIMARY KEY("Artist_ID")
+);
 
-```
+CREATE TABLE "Albums" (
+	"Artist_ID"	TEXT,
+	"Album_name"	TEXT,
+	"Album_ID"	INTEGER,
+	"Year"	INTEGER,
+	"Sales_Millions"	INTEGER,
+	"Runtime_Minutes"	INTEGER,
+	PRIMARY KEY("Album_ID")
+);
+
+CREATE TABLE "Songs" (
+	"Song_Title"	TEXT,
+	"Album_ID"	INTEGER,
+	"Length_Seconds"	INTEGER,
+	PRIMARY KEY("Song_Title")
+);
 
 ---
 
 ## 2. Seeda med data — INSERT
 
-```sql
---- skriv din SQL-kod här ---
+INSERT INTO Artist (Name, Artist_ID, Birth_year, City, Genre, Number_of_Albums) 
+VALUES 
+    ('Michael Jackson', 'MJ', 1958, 'Indiana', 'POP', 10);
 
-```
+INSERT INTO Albums
+    (Artist_ID, Album_name, Album_ID, Year, Sales_Millions, Runtime_Minutes)
+VALUES
+    ('MJ', 'Off the Wall', 1, 1979, 20, 42),
+    ('MJ', 'Thriller', 2, 1982, 70, 42),
+    ('MJ', 'Bad', 3, 1987, 35, 48),
+    ('MJ', 'Dangerous', 4, 1991, 32, 77),
+    ('MJ', 'HIStory', 5, 1995, 20, 148);
+
+    INSERT INTO Songs (Song_Title, Album_ID, Length_Seconds)
+VALUES  
+	('Heal the World', 4, 383),
+	('Earth Song', 5, 423),
+	('Thriller', 2, 358),
+    ('Beat It', 2, 258),
+	('Dont Stop Til You Get Enough', 1, 356),
+	('Bad', 3, 247),
+	('Scream', 5, 276),
+	('You Are Not Alone', 5, 353),
+	('Black or White', 4, 205),
+    ('Remember the Time', 4, 239),
+	('Baby Be Mine', 2, 260),
+    ('The Girl Is Mine', 2, 222),
+	('Off the Wall', 1, 244),
+	('Rock with You', 1, 220),
+	('Wanna Be Startin Somethin', 2, 362),
+	('The Way You Make Me Feel', 3, 298),
+    ('Man in the Mirror', 3, 319);
+
 
 ---
 
