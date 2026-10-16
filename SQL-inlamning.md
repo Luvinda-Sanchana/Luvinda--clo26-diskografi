@@ -6,7 +6,7 @@
 
 ---
 
-> Lägg länk till eller bild på ditt ER-diagram här:
+> Lägg länk till eller bild på ditt ER-diagram här: https://dbdiagram.io/e/6ad0cde0aebfe7a21ffc360b/6ad24407fe5cc8bda2db3ada
 > `[ER-diagram](er_diagram.png)`
 
 ---
