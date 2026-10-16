@@ -50,6 +50,7 @@ VALUES
 
 INSERT INTO Albums
     (Artist_ID, Album_name, Album_ID, Year, Sales_Millions, Runtime_Minutes)
+	
 VALUES
     ('MJ', 'Off the Wall', 1, 1979, 20, 42),
     ('MJ', 'Thriller', 2, 1982, 70, 42),
@@ -57,7 +58,7 @@ VALUES
     ('MJ', 'Dangerous', 4, 1991, 32, 77),
     ('MJ', 'HIStory', 5, 1995, 20, 148);
 
-    INSERT INTO Songs (Song_Title, Album_ID, Length_Seconds)
+ INSERT INTO Songs (Song_Title, Album_ID, Length_Seconds)
 VALUES  
 	('Heal the World', 4, 383),
 	('Earth Song', 5, 423),
@@ -76,6 +77,7 @@ VALUES
 	('Wanna Be Startin Somethin', 2, 362),
 	('The Way You Make Me Feel', 3, 298),
     ('Man in the Mirror', 3, 319);
+
 
 
 ---
