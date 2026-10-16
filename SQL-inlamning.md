@@ -85,21 +85,26 @@ VALUES
 ```sql
 --- query 1: Lista alla album, sorterade efter år ---
 
+SELECT * FROM Albums ORDER BY Year
 
 --- query 2: Lista alla låtar på ett specifikt album ---
 
+SELECT * FROM Songs WHERE Album_ID  = '3'
 
 --- query 3: Antal låtar per album ---
 
+SELECT Album_ID, COUNT(*) AS Song_Count
+FROM Songs
+GROUP BY Album_ID;
 
 --- query 4: Längsta låten ---
 
+SELECT* FROM Songs ORDER BY Length_Seconds DESC LIMIT 1
 
 --- query 5: Alla låtar sorterade alfabetiskt ---
 
-```
+SELECT* FROM SONGS ORDER BY Song_Title
 
----
 
 ## 4. Lägg till en ny rad — INSERT
 
@@ -124,19 +129,29 @@ VALUES
 ```sql
 --- uppdatera minst en rad i valfri tabell ---
 
-```
 
----
 
 ## 7. VG-queries (om du siktar på VG)
 
 ```sql
 --- query 6: Snittlängd på låtar per album ---
 
+SELECT Album_ID, AVG(Length_Seconds) AS Average_Length
+FROM Songs
+GROUP BY Album_ID;
 
 --- query 7: Albumet med flest låtar ---
 
+SELECT Album_ID, COUNT(*) AS Song_Count
+FROM Songs
+GROUP BY Album_ID 
+ORDER BY Song_Count DESC LIMIT 1;
 
 --- query 8: Alla låtar längre än 4 minuter (240 sekunder), med albumtitel ---
+
+SELECT Songs.*, Albums.Album_name
+FROM Songs
+JOIN Albums ON Songs.Album_ID = Albums.Album_ID
+WHERE Songs.Length_Seconds > 240;
 
 ```
