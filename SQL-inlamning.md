@@ -1,8 +1,8 @@
 # SQL-inlämning — Diskografi
 
-**Namn:** [Ditt namn]  
-**Artist:** [Din valda artist]  
-**Datum:** [Datum]
+**Namn:** [Luvinda Sanchana Weerasinghe]  
+**Artist:** [Michael Jackson]  
+**Datum:** [2026.10.16]
 
 ---
 
@@ -10,6 +10,7 @@
 > `[ER-diagram](er_diagram.png)`
 
 ---
+
 
 ## 1. Skapa databasen — CREATE TABLE
 
@@ -42,6 +43,7 @@ CREATE TABLE Songs (
 );
 
 ---
+
 
 ## 2. Seeda med data — INSERT
 
@@ -79,9 +81,8 @@ VALUES
 	('The Way You Make Me Feel', 3, 298),
     ('Man in the Mirror', 3, 319);
 
-
-
 ---
+
 
 ## 3. Söka — SELECT
 
@@ -109,6 +110,7 @@ SELECT* FROM Songs ORDER BY Length_Seconds DESC LIMIT 1
 SELECT* FROM SONGS ORDER BY Song_Title
 
 
+
 ## 4. Lägg till en ny rad — INSERT
 
 ```sql
@@ -119,6 +121,7 @@ Values ('MJ', 'Invincible', 6, 2001, 10, 77);
 
 ---
 
+
 ## 5. Ta bort en rad — DELETE
 
 ```sql
@@ -128,10 +131,15 @@ DELETE FROM SONGS WHERE Song_Title = 'Scream'
 
 ---
 
+
 ## 6. Uppdatera en rad — UPDATE
 
 ```sql
 --- uppdatera minst en rad i valfri tabell ---
+
+UPDATE Songs
+SET Album_ID = 5, Length_Seconds = 300
+WHERE Song_Title = 'Thriller';
 
 
 
