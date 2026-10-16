@@ -124,7 +124,7 @@ Values ('MJ', 'Invincible', 6, 2001, 10, 77);
 ```sql
 --- ta bort en rad ur valfri tabell ---
 
-```
+DELETE FROM SONGS WHERE Song_Title = 'Scream'
 
 ---
 
