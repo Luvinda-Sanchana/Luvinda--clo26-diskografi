@@ -13,31 +13,32 @@
 
 ## 1. Skapa databasen — CREATE TABLE
 
-CREATE TABLE "Artist" (
-	"Name"	TEXT,
-	"Artist_ID"	TEXT,
-	"Birth_year"	TEXT,
-	"City"	TEXT,
-	"Genre"	TEXT,
-	"Number_of_Albums"	INTEGER,
-	PRIMARY KEY("Artist_ID")
+CREATE TABLE Artist (
+    Name TEXT,
+    Artist_ID TEXT PRIMARY KEY,
+    Birth_year INTEGER,
+    City TEXT,
+    Genre TEXT,
+    Number_of_Albums INTEGER
 );
 
-CREATE TABLE "Albums" (
-	"Artist_ID"	TEXT,
-	"Album_name"	TEXT,
-	"Album_ID"	INTEGER,
-	"Year"	INTEGER,
-	"Sales_Millions"	INTEGER,
-	"Runtime_Minutes"	INTEGER,
-	PRIMARY KEY("Album_ID")
+CREATE TABLE Albums (
+    Artist_ID TEXT,
+    Album_name TEXT,
+    Album_ID INTEGER PRIMARY KEY,
+    Year INTEGER,
+    Sales_Millions INTEGER,
+    Runtime_Minutes INTEGER,
+    FOREIGN KEY (Artist_ID)
+        REFERENCES Artist(Artist_ID)
 );
 
-CREATE TABLE "Songs" (
-	"Song_Title"	TEXT,
-	"Album_ID"	INTEGER,
-	"Length_Seconds"	INTEGER,
-	PRIMARY KEY("Song_Title")
+CREATE TABLE Songs (
+    Song_Title TEXT PRIMARY KEY,
+    Album_ID INTEGER,
+    Length_Seconds INTEGER,
+    FOREIGN KEY (Album_ID)
+        REFERENCES Albums(Album_ID)
 );
 
 ---
