@@ -61,7 +61,7 @@ VALUES
     ('MJ', 'Dangerous', 4, 1991, 32, 77),
     ('MJ', 'HIStory', 5, 1995, 20, 148);
 
- INSERT INTO Songs (Song_Title, Album_ID, Length_Seconds)
+INSERT INTO Songs (Song_Title, Album_ID, Length_Seconds)
 VALUES  
 	('Heal the World', 4, 383),
 	('Earth Song', 5, 423),
