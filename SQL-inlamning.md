@@ -114,7 +114,8 @@ SELECT* FROM SONGS ORDER BY Song_Title
 ```sql
 --- lägg till ett nytt album eller en ny låt ---
 
-```
+INSERT INTO Albums (Artist_ID, Album_name, Album_ID, Year, Sales_Millions, Runtime_Minutes)
+Values ('MJ', 'Invincible', 6, 2001, 10, 77);
 
 ---
 
